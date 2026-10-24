@@ -1,0 +1,15 @@
+=== Detected Storage Devices (Get-PhysicalDisk output) ===
+
+Number FriendlyName                 SerialNumber                   MediaType   CanPool OperationalStatus HealthStatus Usage            Size
+------ ------------                 ------------                   ---------   ------- ----------------- ------------ -----            ----
+0      BIWIN AP423 CE480T5D101-512G 2433019407350       _00000001. SSD         False   OK                Healthy      Auto-Select 476.94 GB
+1      Generic Flash Disk           1                             Unspecified False   OK                Healthy      Auto-Select  15.23 GB
+
+
+
+
+=== Storage Sizes in GB ===
+BIWIN AP423 CE480T5D101-512G : 476.94 GB
+Generic Flash Disk : 15.23 GB
+
+

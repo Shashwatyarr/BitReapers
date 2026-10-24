@@ -1,0 +1,83 @@
+================================================================================
+       CERTIFICATE OF MEDIA SANITIZATION (NIST SP 800-88 REV. 1 APPENDIX G)     
+================================================================================
+
+  Certificate ID       : BR-NIST80088-A4F9-7C2D-E890B1
+  Standard Adhered     : NIST Special Publication 800-88 Revision 1 (Guidelines for Media Sanitization)
+  Date & Time (UTC)    : 2026-10-24T05:17:45Z
+  Issuing Organization : BitReapers Enterprise CyberSec Labs
+  Certified Operator   : Shashwat Srivastava (Lead Forensic SecOps Engineer)
+  Tool Identification  : BitReapers NIST 800-88 Sanitization Suite v2.4 (Cross-Platform Compliant)
+
+--------------------------------------------------------------------------------
+  1. MEDIA IDENTIFICATION & HARDWARE PROFILE
+--------------------------------------------------------------------------------
+  Target Device Node   : /dev/nvme0n1
+  Friendly Description : Samsung SSD 980 PRO 1TB Enterprise NVMe SED
+  Model Number         : MZ-V8P1T0BW
+  Serial Number        : S5GXNF0R419823K
+  Firmware Revision    : 5B2QGXA7
+  Bus Interface        : NVMe (PCIe Gen 4.0 x4)
+  Media Classification : Solid State Drive (NVMe SED / Hardware AES-XTS 256)
+  Total Capacity       : 1000.20 GB (1000204886016 bytes)
+  Sector Format        : Logical 512B / Physical 4096B
+  Total LBA Count      : 1953525168 sectors
+
+--------------------------------------------------------------------------------
+  2. PRE-SANITIZATION COMPLIANCE CHECKS (HIDDEN AREAS & FREEZE AUDIT)
+--------------------------------------------------------------------------------
+  Host Protected Area (HPA)  : [✓] NOT PRESENT / FULLY EXPOSED
+  Device Config Overlay (DCO): [✓] NOT PRESENT / FACTORY GEOMETRY VERIFIED
+  ATA Security Freeze Status : [✓] NOT FROZEN (Command Ready)
+  Hardware SED / Encryption  : [✓] AES-256 SED (TCG Opal 2.0 / IEEE 1667 Capable)
+  NVMe Sanitize / Format Cap : [✓] Block Erase, Crypto Erase, User Data Erase Supported
+
+--------------------------------------------------------------------------------
+  3. SANITIZATION METHOD & EXECUTION
+--------------------------------------------------------------------------------
+  NIST Sanitization Level    : PURGE (Forensic Laboratory Recovery Infeasible)
+  Method Executed            : NIST SP 800-88 Rev. 1 Purge (NVMe Sanitize Block Erase & Crypto Purge)
+  Number of Passes           : 1 Pass (Per NIST 800-88 Rev 1 Section 5 for Flash Storage)
+  Target Pattern             : 0x00 / Deallocated Deterministic Read Zero (DZAT)
+  Execution Window (UTC)     : 2026-10-24T05:15:00Z -> 2026-10-24T05:17:42Z
+  Total Elapsed Time         : 162.00 seconds
+
+--------------------------------------------------------------------------------
+  4. POST-SANITIZATION VERIFICATION (NIST SP 800-88 SEC 4.7 / 4.8)
+--------------------------------------------------------------------------------
+  Verification Technique     : Representative Pseudorandom Sampling (NIST SP 800-88 Rev. 1 Sec 4.7)
+  Sampling Coverage          : 5.0% of Total Address Space
+  Total Sectors Checked      : 5000 blocks
+  Sectors Matching Expected  : 5000 blocks
+  Failed / Bad Sectors       : 0 blocks
+  Verification Outcome       : [ PASSED ]
+  Forensic Integrity Status  : Residual data probability < 10^-12. Zero bad sectors.
+
+  Detailed Sampling Checkpoints:
+    - LBA            0 [Beginning (LBA 0 / Primary MBR) ]: Data: 00 00 00 00 00 00 00 00 | Status: PASS
+    - LBA            1 [Beginning (LBA 1 / GPT Header)  ]: Data: 00 00 00 00 00 00 00 00 | Status: PASS
+    - LBA    488381292 [Uniform Random Sample (25% Span)]: Data: 00 00 00 00 00 00 00 00 | Status: PASS
+    - LBA    976762584 [Middle Region (50% Disk Span)   ]: Data: 00 00 00 00 00 00 00 00 | Status: PASS
+    - LBA   1465143876 [Uniform Random Sample (75% Span)]: Data: 00 00 00 00 00 00 00 00 | Status: PASS
+    - LBA   1953525167 [End Boundary (Backup GPT Header)]: Data: 00 00 00 00 00 00 00 00 | Status: PASS
+
+--------------------------------------------------------------------------------
+  5. CRYPTOGRAPHIC PROOF & TAMPER RESISTANCE
+--------------------------------------------------------------------------------
+  Integrity Hash (SHA-256)   : 7d25e0a618fca201e6878bdf1f5c69784fa2d890cf3a1e2fbc5e10098a54dc9b
+  Cryptographic Signature    : RSA-4096-SHA256-SIG-98F1C3A027B4D6E8...44A29B07
+
+--------------------------------------------------------------------------------
+  6. COMPLIANCE CERTIFICATION DECLARATION
+--------------------------------------------------------------------------------
+  "I hereby certify that the media identified above has been sanitized in strict
+   accordance with NIST Special Publication 800-88 Revision 1 Guidelines for
+   Media Sanitization. All user-addressable blocks, over-provisioned cells, and
+   internal encryption keys have been purged and verified so that target data
+   recovery is infeasible."
+
+  Authorized Officer: Shashwat Srivastava
+  Title             : Lead Forensic SecOps Engineer
+  Organization      : BitReapers Forensic Security Labs
+  Date Verified     : 2026-10-24
+================================================================================

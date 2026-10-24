@@ -1,0 +1,18 @@
+{
+  "physical_disks": [
+    {
+        "FriendlyName":  "BIWIN AP423 CE480T5D101-512G",
+        "SerialNumber":  "2433019407350       _00000001.",
+        "MediaType":  "SSD",
+        "Size":  512110190592,
+        "FirmwareVersion":  "1"
+    },
+    {
+        "FriendlyName":  "Generic Flash Disk",
+        "SerialNumber":  "\u00031",
+        "MediaType":  "Unspecified",
+        "Size":  16357785600,
+        "FirmwareVersion":  "8.07"
+    }
+]
+}
